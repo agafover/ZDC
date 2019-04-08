@@ -62,7 +62,7 @@ void html_maker(int RunNumber = 0)
 	if(!ofile) {cerr<<"ofile.open failed"<<endl;return 0;}
 
 	ofile<<"<!DOCTYPE HTML>"<<endl;
-	ofile<<"<!-- This webpage is craeted by Lukas Kramarik -->"<<endl;
+	ofile<<"<!-- This webpage is created by Lukas Kramarik -->"<<endl;
 	ofile<<"<html>"<<endl;
 	ofile<<"<!-- Head lkramarik --><!-- **************************************** -->"<<endl;
 	ofile<<"<head>"<<endl;

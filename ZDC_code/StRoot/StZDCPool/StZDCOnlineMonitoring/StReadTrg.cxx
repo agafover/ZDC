@@ -1379,6 +1379,8 @@ void StReadTrg::readTrg(const Char_t *filename, Int_t nEvents
 	fstr << "<TABLE border=\"0\">" << endl;
 	infoLine = TString::Format("<TR> <TD align=\"right\">Last monitoring run:</TD> <TD align=\"left\">%s &mdash; %s (%i sec)</TD> <TR>", startTimeStr.Data(), stopTimeStr.Data(), totalTimeSec);
 	fstr << infoLine << endl;
+	infoLine = TString::Format("<TR> <TD align=\"right\"><b>For BES, analysis of the runs is not working properly. Please check mainly pdf files wit plots.<b></TD>");
+    fstr << infoLine << endl;
 	infoLine = TString::Format("<TR> <TD align=\"right\">Total processed files:</TD> <TD align=\"left\">%i</TD> <TR>", totalFilesProcessed);
 	fstr << infoLine << endl;
 	infoLine = TString::Format("<TR> <TD align=\"right\">Total processed runs:</TD> <TD align=\"left\">%i</TD> <TR>", totalRunsProcessed);
