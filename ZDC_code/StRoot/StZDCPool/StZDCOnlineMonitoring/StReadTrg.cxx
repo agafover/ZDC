@@ -1376,11 +1376,16 @@ void StReadTrg::readTrg(const Char_t *filename, Int_t nEvents
 	TString infoLine;
 	TString startTimeStr = startTime.AsSQLString();
 	TString stopTimeStr = stopTime.AsSQLString();
-	fstr << "<TABLE border=\"0\">" << endl;
+    infoLine = TString::Format("<p><b>For BES, analysis of the runs is not working properly. Please check mainly pdf files wit plots.</b></p>");
+    fstr << infoLine << endl;
+
+    fstr << "<TABLE border=\"0\">" << endl;
+    infoLine = TString::Format("<TR> <TD align=\"right\">production_19GeV_2019:</TD> <TD align=\"left\">day &lt; 94 </TD> <TR>");
+    fstr << infoLine << endl;
+    infoLine = TString::Format("<TR> <TD align=\"right\">production_14p5GeV_2019:</TD> <TD align=\"left\">94 &le; day &lt; ...;</TD> <TR>");
+    fstr << infoLine << endl;
 	infoLine = TString::Format("<TR> <TD align=\"right\">Last monitoring run:</TD> <TD align=\"left\">%s &mdash; %s (%i sec)</TD> <TR>", startTimeStr.Data(), stopTimeStr.Data(), totalTimeSec);
 	fstr << infoLine << endl;
-	infoLine = TString::Format("<TR> <TD align=\"right\"><b>For BES, analysis of the runs is not working properly. Please check mainly pdf files wit plots.<b></TD>");
-    fstr << infoLine << endl;
 	infoLine = TString::Format("<TR> <TD align=\"right\">Total processed files:</TD> <TD align=\"left\">%i</TD> <TR>", totalFilesProcessed);
 	fstr << infoLine << endl;
 	infoLine = TString::Format("<TR> <TD align=\"right\">Total processed runs:</TD> <TD align=\"left\">%i</TD> <TR>", totalRunsProcessed);
