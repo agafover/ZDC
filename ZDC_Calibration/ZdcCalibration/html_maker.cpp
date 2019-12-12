@@ -8,7 +8,7 @@ void html_maker(int RunNumber = 0)
 //	char trgSetup[20] = {"pp500production"};
 	char typeEnergy[10]={"lkramarik"};
 
-	TString Trgsetup = "production_2019";
+	TString Trgsetup = "production_2020";
 	TString BeamTypeEnergy = "Au+Au";
 //*********************************************************
 	if(RunNumber < 1e7 || RunNumber >= 1e8) // has to be an 8-digit number

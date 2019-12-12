@@ -1,8 +1,8 @@
 #!/bin/bash
 
 runList=${1:-"unSeenRuns.list"}
-runDirectory="run19.ZdcCalibration.lkramarik"
-runYear="run19"
+runDirectory="run20.ZdcCalibration.lkramarik"
+runYear="run20"
 tofCut=0
 
 # untar all the tarred .dat files
