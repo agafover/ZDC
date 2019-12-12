@@ -7,8 +7,8 @@
 #include "RTS/src/DAQ_READER/daqReader.h"
 #include "RTS/src/DAQ_READER/daq_dta.h"
 #include "RTS/src/DAQ_READER/daq_det.h"
-#include "StDaqLib/TRG/trgStructures2019.h" // msimko
-#include "StEvent/StTriggerData2019.h" // msimko
+#include "StDaqLib/TRG/trgStructures2020.h" // lkramarik
+#include "StEvent/StTriggerData2020.h" // lkramarik
 #endif
 
 #include "TriggerData.h"
@@ -56,9 +56,13 @@ StTriggerData* TriggerData::Instance(char *td, int run, int event){
    // if(td[3] == 0x43){//modified by msimko for run2016	!!
    // if(td[3] == 0x44){//modified by msimko for run2017	!!
 //      if(td[3] == 0x45){//modified by msimko for run2017	!!
-      if(td[3] == 0x46){//modified by msimko for run2019	!!
-	TriggerDataBlk2019* trgdata2019 = (TriggerDataBlk2019*)td; // msimko
-	StTriggerData2019* trgd = new StTriggerData2019(trgdata2019,run); // msimko
+//      if(td[3] == 0x46){//modified by msimko for run2019	!!
+      if(td[3] == 0x47){//modified by lkramarik for run2020	!!
+//	TriggerDataBlk2019* trgdata2019 = (TriggerDataBlk2019*)td; // msimko
+//	StTriggerData2019* trgd = new StTriggerData2019(trgdata2019,run); // msimko
+
+	TriggerDataBlk2020* trgdata2020 = (TriggerDataBlk2020*)td; // lkramarik
+	StTriggerData2020* trgd = new StTriggerData2019(trgdata2020,run); // lkramarik
 //        trgd->dump();//yhzhu added for run2012!
 	trgdata = (StTriggerData*)trgd;
 	run_old = run;
